@@ -1,0 +1,13 @@
+version: "3.1"
+services:
+  cluster:
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"
+    image: pedroballona/mongo-cluster:1.0
+    volumes: 
+      - mongovolume:/var/data
+    restart: always
+volumes: 
+  mongovolume:
